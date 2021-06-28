@@ -1,0 +1,71 @@
+<style>
+    table,
+    tr,
+    td {
+        border: 1px solid black;
+        border-spacing: 0;
+    }
+    
+    table {
+        border-left: 1px solid red;
+    }
+    
+    td:nth-child(1) {
+        border-left: 1px solid red;
+    }
+</style>
+
+
+<table>
+    <tr align="center">
+        <td>
+            번호
+        </td>
+        <td>
+            시군구
+        </td>
+        <td>
+            기관명
+        </td>
+        <td>
+            진료과수
+        </td>
+        <td>
+            병실 수
+        </td>
+        <td>
+            전화번호
+        </td>
+        <td>
+            주소
+        </td>
+    </tr>
+    {% for h in Hospital_list %}
+    <tr>
+        <td>
+            {{h.id}}
+        </td>
+        <td>
+            {{h.sido}}
+        </td>
+        <td>
+            {{h.name}}
+        </td>
+        <td>
+            {{h.medical}}
+        </td>
+        <td>
+            {{h.room}}
+        </td>
+        <td>
+            {{h.tel}}
+        </td>
+        <td>
+            {{h.address}}
+        </td>
+    </tr>
+
+
+    {% endfor %}
+
+</table>
